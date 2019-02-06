@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 import logo from './logo.svg';
 import './App.css';
+import { AppState } from './model/app-state';
 
+@observer
 class App extends Component {
+
+  appState = new AppState();
+
   render() {
     return (
       <div className="App">
@@ -19,6 +25,11 @@ class App extends Component {
           >
             Learn React
           </a>
+		  <p>Count: {this.appState.count}</p>
+		  <p>
+			  <button onClick={(e) => this.appState.resetCounter()}>Reset</button>&nbsp; 
+			  <button onClick={(e) => this.appState.increaseCounter()}>Hit me!</button>
+		  </p>
         </header>
       </div>
     );

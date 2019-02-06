@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), 
+using the --typescript option.
+
+In addition, [MobX](https://mobx.js.org/) has been added in from the start for state management.
+
+In order to use the MobX decorators, the use of "experimentalDecorators" is switched on in the tsconfig.json.
 
 ## Available Scripts
 
